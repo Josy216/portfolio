@@ -1,8 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import './Index.css';
-
-import { FaGithub, FaLinkedin, FaTelegramPlane, FaTiktok, FaTwitter } from "react-icons/fa";
-
 import { FaHtml5 } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
 import { FaBootstrap } from 'react-icons/fa';
@@ -109,51 +106,37 @@ const Index = () => {
     {
       title: "Netflix Clone",
       description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
-      demoUrl: "https://jo-movies.netlify.app/",
-      githubUrl: "https://github.com/Josy216/netflix"
+      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg"
     },
     {
       title: "Amazon Clone",
       description: "A feature-rich ecommerce platform using React, Node.js, Express, and Stripe. Users can browse products, view details, add items to cart, sign up, and securely checkout via an integrated payment system — all backed by your custom backend.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png",
-      demoUrl: "https://jo-amz-clone.netlify.app/",
-      githubUrl: "https://github.com/Josy216/AmazonBackend"
+      image: "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png"
     },
     {
       title: "Evangadi Forum",
       description: "A supportive Q&A community built for students to ask questions, share answers, and grow together. Designed to empower peer-to-peer learning within the Evangadi Tech community using a full-stack architecture.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/firum.png",
-      demoUrl: "https://evanforum.com/",
-      githubUrl: "#"
+      image: "https://scintillating-madeleine-ea406a.netlify.app/firum.png"
     },
     {
       title: "Apple Clone",
       description: "A stylish Apple.com-inspired UI built with React, Node.js, Express, and MySQL. Features include embedded product videos via YouTube API and a polished frontend that mimics Apple's signature design aesthetics.",
-      image: "https://josteka.netlify.app/ID-Photos/apple.jpg",
-      demoUrl: "https://jotekasap-le.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Apple"
+      image: "https://josteka.netlify.app/ID-Photos/apple.jpg"
     },
     {
       title: "Jocode Dev Tool",
       description: "A platform offering free premium dev tools and learning resources for aspiring developers. Designed to support the coding journey with handpicked content and productivity features.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
+      image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg"
     },
     {
       title: "MovieLand",
       description: "A simple yet powerful React app where users can search movies, view detailed info like cast, storyline, and posters — all fetched via an external movie API.",
-      image: "https://images.unsplash.com/photo-1677344297888-81f04aa12a60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxtb3ZpZXN8ZW58MHx8fHwxNzQ5ODQxNzMyfDA&ixlib=rb-4.1.0&q=85",
-      demoUrl: "https://jocode-movieland.netlify.app/",
-      githubUrl: "https://github.com/Josy216/movieland"
+      image: "https://images.unsplash.com/photo-1677344297888-81f04aa12a60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxtb3ZpZXN8ZW58MHx8fHwxNzQ5ODQxNzMyfDA&ixlib=rb-4.1.0&q=85"
     },
     {
       title: "Unsplash.com Clone",
       description: "A fast, responsive image search engine using the Unsplash API. Offers one-click downloads of high-quality photos with zero watermarks or signups — just search, find, and save.",
-      image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg",
-      demoUrl: "https://joseph-unsplash.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Joseph-unsplash-API"
+      image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg"
     }
   ];
 
@@ -161,44 +144,32 @@ const Index = () => {
     {
       title: "My Frontend Journey — 20+ Projects from Pure Grind",
       description: " This portfolio is the raw reflection of me burning out and building up — looping through HTML, CSS, and JavaScript with passion.   It’s my messy, honest, and evolving learning journey — and I’m proud of it.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxkZXZlbG9wZXIlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzQ5ODQzMDk5fDA&ixlib=rb-4.1.0&q=85",
-      demoUrl: "https://josteka.netlify.app/",
-      githubUrl: "https://github.com/josephteka/color-generator"
+      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxkZXZlbG9wZXIlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzQ5ODQzMDk5fDA&ixlib=rb-4.1.0&q=85"
     },
     {
       title: "QR Code Generator",
       description: "A website that lets users set their private links, text and password in QR codes. Perfect for sharing secure information in a visual format.",
-      image: "https://josteka.netlify.app/ID-Photos/qr-code.jpg",
-      demoUrl: "https://jo-qr-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/final-port"
+      image: "https://josteka.netlify.app/ID-Photos/qr-code.jpg"
     },
     {
       title: "TodoList App",
       description: "This app helps users organize their daily tasks by adding, updating, and deleting them. I created it using JavaScript to manage tasks efficiently. It’s useful for staying productive and keeping track of important things to do.",
-      image: "https://josteka.netlify.app/ID-Photos/todo.jpg",
-      demoUrl: "https://joseph-todo.netlify.app/",
-      githubUrl: "https://github.com/josephteka/quote-generator"
+      image: "https://josteka.netlify.app/ID-Photos/todo.jpg"
     },
     {
       title: "Quote Generator",
       description: "An inspiring website that generates endless facts and motivational quotes to uplift users and provide daily inspiration.",
-      image: "https://josteka.netlify.app/ID-Photos/quote.jpg",
-      demoUrl: "https://dailquote.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Generator-Qoute"
+      image: "https://josteka.netlify.app/ID-Photos/quote.jpg"
     },
     {
       title: "Notion Clone ",
       description: "A simple and funny note-taking app that lets users edit and save notes on localStorage. Because sometimes you just need a place to dump your random thoughts!",
-      image: "https://josteka.netlify.app/ID-Photos/notion.jpg",
-      demoUrl: "https://my-notion-five-rust.vercel.app/",
-      githubUrl: "https://github.com/Josy216/my-notion"
+      image: "https://josteka.netlify.app/ID-Photos/notion.jpg"
     },
     {
       title: "Color Generator",
       description: "A hexa and RGB color generator that gets people confused choosing from colors they don't know the name of. Perfect for designers who like surprises!",
-      image: "https://josteka.netlify.app/ID-Photos/hexa-color.jpg",
-      demoUrl: "https://josy-hex-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/hexa-color-code"
+      image: "https://josteka.netlify.app/ID-Photos/hexa-color.jpg"
     }
   ];
 
@@ -229,13 +200,6 @@ const Index = () => {
     }
   ];
 
-  const socialLinks = [
-  { name: "GitHub", icon: <FaGithub />, url: "https://github.com/josy216" },
-  { name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/joseph-teka-271661309" },
-  { name: "Telegram", icon: <FaTelegramPlane />, url: "https://t.me/jocode216" },
-  { name: "TikTok", icon: <FaTiktok />, url: "https://tiktok.com/@jocode216" },
-  { name: "Twitter", icon: <FaTwitter />, url: "https://x.com/josephteka" } 
-];
 
   return (
     <div className="portfolio-container">
@@ -276,6 +240,7 @@ const Index = () => {
                 <p>
                   I hold various certificates in web development and am constantly expanding my knowledge in the latest technologies. Currently working as a freelancer, building innovative solutions and growing my expertise in the field.
                 </p>
+                <p>This portfolio is Basically designed for upwork, whic means it contains no link to project or me. so you can see all my projects live demo and github Repository Once we make our deal</p>
               </div>
             </div>
           </div>
@@ -312,24 +277,6 @@ const Index = () => {
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-description">{project.description}</p>
                     
-                    {/* Project Links */}
-                    <div className="project-icons">
-                      <button
-                        className="project-icon-btn"
-                        onClick={() => window.open(project.demoUrl, '_blank')}
-                        title="Live Demo"
-                      >
-                        🔗
-                      </button>
-                      <button
-                        className="project-icon-btn"
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                        title="GitHub Repository"
-                      >
-                         <FaGithub />
-                      </button>
-
-                    </div>
                   </div>
                 </div>
               ))}
@@ -367,23 +314,6 @@ const Index = () => {
                       <h3 className="project-title">{project.title}</h3>
                       <p className="project-description">{project.description}</p>
                       
-                      {/* Project Links */}
-                      <div className="project-icons">
-                        <button
-                          className="project-icon-btn"
-                          onClick={() => window.open(project.demoUrl, '_blank')}
-                          title="Live Demo"
-                        >
-                          🔗
-                        </button>
-                        <button
-                          className="project-icon-btn"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                          title="GitHub Repository"
-                        >
-                          <FaGithub />
-                        </button>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -407,89 +337,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="contact-section">
-          <div className="container">
-            <h2 className="section-title">Get In Touch</h2>
-            <div className="contact-card">
-             <form
-  action="https://getform.io/f/bvryzqzb"
-  method="POST"
-  className="contact-form"
->
-  <div className="form-group">
-    <label htmlFor="name">Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      placeholder="Your full name"
-      className="form-input"
-    />
-  </div>
-
-  <div className="form-group">
-    <label htmlFor="email">Email Address</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      placeholder="your.email@example.com"
-      className="form-input"
-    />
-  </div>
-
-  <div className="form-group">
-    <label htmlFor="message">Message</label>
-    <textarea
-      id="message"
-      name="message"
-      required
-      rows={6}
-      placeholder="Tell me about your project..."
-      className="form-textarea"
-    />
-  </div>
-
-  {/* Honeypot Field */}
-  <input type="hidden" name="_gotcha" style={{ display: 'none' }} />
-
-
-  <button type="submit" className="submit-btn">
-    ✉️ Send Message
-  </button>
-</form>
-
-            </div>
-          </div>
-        </section>
-
-        {/* Footer with Social Links */}
-        <footer className="footer">
-          <div className="container">
-            {/* Social Media Links */}
-            <div className="social-links">
-              {socialLinks.map((social, index) => (
-                <button
-                  key={index}
-                  className="social-btn"
-                  onClick={() => window.open(social.url, '_blank')}
-                  title={social.name}
-                >
-                  <span className="social-icon">{social.icon}</span>
-                </button>
-              ))}
-            </div>
-            
-            {/* Copyright */}
-            <div className="copyright">
-              <p>© 2025 Joseph Teka. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   );
