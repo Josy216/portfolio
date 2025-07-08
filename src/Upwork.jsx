@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './Index.css';
+import './index.css';
 import { FaHtml5 } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
 import { FaBootstrap } from 'react-icons/fa';
@@ -13,7 +13,7 @@ import { FaGit } from 'react-icons/fa';
 import { SiNetlify } from 'react-icons/si';
 import { IoLogoFirebase } from 'react-icons/io5';
 
-const Index = () => {
+const Upwork = () => {
 
   const techStack = [
     { name: "HTML", icon:<FaHtml5 /> },
@@ -234,13 +234,13 @@ const Index = () => {
             <h2 className="section-title">About Me</h2>
             <div className="about-content">
               <div className="about-text">
+                <p>This portfolio is Basically designed for upwork, whic means it contains no link to project or me. so you can see all my projects live demoand github Repository Once we make our deal</p>
                 <p>
                   Hi, I'm Joseph Teka — a passionate full-stack web developer with experience building modern web apps using clean code and solid UI/UX principles. I'm a Computer Science student at Jimma University and graduated from Evangadi Tech with full-stack development skills.
                 </p>
                 <p>
                   I hold various certificates in web development and am constantly expanding my knowledge in the latest technologies. Currently working as a freelancer, building innovative solutions and growing my expertise in the field.
                 </p>
-                <p>This portfolio is Basically designed for upwork, whic means it contains no link to project or me. so you can see all my projects live demo and github Repository Once we make our deal</p>
               </div>
             </div>
           </div>
@@ -251,8 +251,8 @@ const Index = () => {
           <div className="container">
             <h2 className="section-title">My Tech Stack</h2>
             <div className="tech-stack-grid">
-              {techStack.map((tech, index) => (
-                <div key={index} className="tech-stack-card">
+              {techStack.map((tech, Upwork) => (
+                <div key={Upwork} className="tech-stack-card">
                   <div className="tech-icon">{tech.icon}</div>
                   <h3 className="tech-name" style={{textAlign:"center"}}>{tech.name}</h3>
                 </div>
@@ -266,8 +266,8 @@ const Index = () => {
           <div className="container">
             <h2 className="section-title">My Work</h2>
             <div className="projects-grid">
-              {mainProjects.map((project, index) => (
-                <div key={index} className="project-card">
+              {mainProjects.map((project, Upwork) => (
+                <div key={Upwork} className="project-card">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -303,8 +303,8 @@ const Index = () => {
               <h2 className="section-title">Learning Journey Projects</h2>
               <p className="section-subtitle">Projects I built while learning - showing my deep work and growth as a developer</p>
               <div className="projects-grid">
-                {learningProjects.map((project, index) => (
-                  <div key={index} className="project-card">
+                {learningProjects.map((project, Upwork) => (
+                  <div key={Upwork} className="project-card">
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -327,8 +327,8 @@ const Index = () => {
           <div className="container">
             <h2 className="section-title">Why Choose Me</h2>
             <div className="why-choose-grid">
-              {whyChooseMe.map((item, index) => (
-                <div key={index} className="why-choose-card">
+              {whyChooseMe.map((item, Upwork) => (
+                <div key={Upwork} className="why-choose-card">
                   <div className="card-icon">{item.icon}</div>
                   <h3 className="card-title">{item.title}</h3>
                   <p className="card-description">{item.description}</p>
@@ -342,4 +342,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Upwork;

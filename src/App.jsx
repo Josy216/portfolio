@@ -1,36 +1,45 @@
 import { useEffect, useRef, useState } from 'react';
-import './Index.css';
+import './index.css';
+import mypic from '/josy.jpg'
 
-import { FaGithub, FaLinkedin, FaTelegramPlane, FaTiktok, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaGithubAlt, FaLinkedin, FaTelegram, FaTelegramPlane, FaTiktok, FaTwitter } from "react-icons/fa";
 
 import { FaHtml5 } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
 import { FaBootstrap } from 'react-icons/fa';
 import { BiLogoTailwindCss } from 'react-icons/bi';
-import { BiLogoJavascript } from 'react-icons/bi';
 import { FaReact } from 'react-icons/fa';
 import { FaNode } from 'react-icons/fa';
 import { SiExpress } from 'react-icons/si';
 import { SiMysql } from 'react-icons/si';
 import { FaGit } from 'react-icons/fa';
-import { SiNetlify } from 'react-icons/si';
 import { IoLogoFirebase } from 'react-icons/io5';
-
-const Index = () => {
+import { AiOutlineJavaScript } from 'react-icons/ai';
+import { FaMdb } from 'react-icons/fa';
+import Jobot from './Jobot';
+import { TbBrandTypescript } from 'react-icons/tb';
+import DownloadResume from './Downloadresume';
+import { RiGithubLine, RiNextjsLine } from 'react-icons/ri';
+import Navbar from './Navbar';
+import Testimonials from './Testimonials';
+import Blog from './Blog';
+const App = () => {
 
   const techStack = [
     { name: "HTML", icon:<FaHtml5 /> },
     { name: "CSS", icon: <FaCss3 /> },
-    { name: "Bootstrap", icon: <FaBootstrap />},
+    { name: "Boostrap", icon: <FaBootstrap /> },
     { name: "Tailwind", icon: <BiLogoTailwindCss /> },
-    { name: "JavaScript", icon: <BiLogoJavascript /> },
+    { name: "JavaScript", icon: <AiOutlineJavaScript /> },
     { name: "React", icon: <FaReact />},
-    { name: "Node.js", icon: <FaNode /> },
+    { name: "Typescript", icon: <TbBrandTypescript />},
+    { name: "Node js", icon: <FaNode /> },
     { name: "Express", icon: <SiExpress /> },
+    { name: "Next js", icon: <RiNextjsLine />},
     { name: "MySQL", icon: <SiMysql /> },
+    { name: "MongoDb", icon: <FaMdb /> },
     { name: "Git/GitHub", icon: <FaGit /> },
-    { name: "Firebase", icon: <IoLogoFirebase /> },
-    { name: "Netlify", icon: <SiNetlify />  }
+    { name: "Firebase", icon: <IoLogoFirebase /> }
   ];
 
 
@@ -93,10 +102,6 @@ const Index = () => {
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
-
-
-  
-
   const handleViewMoreProjects = () => {
     setShowLearningProjects(true);
     setTimeout(() => {
@@ -105,19 +110,27 @@ const Index = () => {
   };
   
  
-  const mainProjects = [
+  const mainProjects = [{
+  title: "Jocode Dev Tool",
+  description: "A powerful all-in-one platform that curates 500+ essential developer tools — from learning roadmaps to deployment resources. Built to help beginners avoid confusion and professionals save time, Jocode Dev Tool simplifies your dev journey with speed, clarity, and zero guesswork.",
+  image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg",
+  demoUrl: "https://jocode-devtools.netlify.app/",
+  githubUrl: "#"
+}
+,
     {
       title: "Netflix Clone",
       description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
       image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
-      demoUrl: "https://jo-movies.netlify.app/",
+      demoUrl: "https://net-dist.vercel.app/",
       githubUrl: "https://github.com/Josy216/netflix"
-    },
+    }
+,
     {
       title: "Amazon Clone",
       description: "A feature-rich ecommerce platform using React, Node.js, Express, and Stripe. Users can browse products, view details, add items to cart, sign up, and securely checkout via an integrated payment system — all backed by your custom backend.",
       image: "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png",
-      demoUrl: "https://jo-amz-clone.netlify.app/",
+      demoUrl: "https://distt-his-git-main-josy216s-projects.vercel.app/#/",
       githubUrl: "https://github.com/Josy216/AmazonBackend"
     },
     {
@@ -135,26 +148,18 @@ const Index = () => {
       githubUrl: "https://github.com/Josy216/Apple"
     },
     {
-      title: "Jocode Dev Tool",
-      description: "A platform offering free premium dev tools and learning resources for aspiring developers. Designed to support the coding journey with handpicked content and productivity features.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg",
-      demoUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "MovieLand",
-      description: "A simple yet powerful React app where users can search movies, view detailed info like cast, storyline, and posters — all fetched via an external movie API.",
-      image: "https://images.unsplash.com/photo-1677344297888-81f04aa12a60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxtb3ZpZXN8ZW58MHx8fHwxNzQ5ODQxNzMyfDA&ixlib=rb-4.1.0&q=85",
-      demoUrl: "https://jocode-movieland.netlify.app/",
-      githubUrl: "https://github.com/Josy216/movieland"
-    },
-    {
       title: "Unsplash.com Clone",
       description: "A fast, responsive image search engine using the Unsplash API. Offers one-click downloads of high-quality photos with zero watermarks or signups — just search, find, and save.",
       image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg",
       demoUrl: "https://joseph-unsplash.netlify.app/",
       githubUrl: "https://github.com/Josy216/Joseph-unsplash-API"
-    }
+    },{
+  title: "Alex Tube",
+  description: "A playful YouTube reaction channel interface built with React — mimicking Netflix’s stylish layout. Alex’s hilarious video reactions keep everyone laughing, with dynamic sliders and smooth UI for a fun, binge-worthy experience. No login required — just pure entertainment.",
+  image: "https://i.ytimg.com/vi/kDefuhzUSZk/hqdefault.jpg",
+  demoUrl: "https://alexfegegfegeg.netlify.app/",
+  githubUrl: "https://github.com/Josy216/netflix"
+}
   ];
 
   const learningProjects = [
@@ -234,11 +239,13 @@ const Index = () => {
   { name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/joseph-teka-271661309" },
   { name: "Telegram", icon: <FaTelegramPlane />, url: "https://t.me/jocode216" },
   { name: "TikTok", icon: <FaTiktok />, url: "https://tiktok.com/@jocode216" },
-  { name: "Twitter", icon: <FaTwitter />, url: "https://x.com/josephteka" } 
+  { name: "Twitter", icon: <FaTwitter />, url: "https://x.com/Joseph376533100?t=ofK-E2KAL642p8zZ7TBPNA&s=09" } 
 ];
 
   return (
     <div className="portfolio-container">
+
+      <Navbar />
       {/* Animated Stars Background */}
       <canvas
         ref={canvasRef}
@@ -248,46 +255,83 @@ const Index = () => {
       {/* Content */}
       <div className="content">
         {/* Header/Hero Section */}
-        <section className="hero-section">
-          <div className="hero-content">
-            {/* Profile Picture */}
-            <div className="profile-picture" style={{textAlign: "center"}}>
-              <img 
-                src="https://josteka.netlify.app/ID-Photos/20241012172330711.jpg" 
-                alt="Joseph Teka"
-                className="profile-img" style={{border:"none"}}
-              />
-            </div>
-            
-            <h1 className="hero-name">Joseph Teka</h1>
-            <div className="animated-title">Full-Stack Web Developer</div>
-          </div>
-        </section>
+        <section className="hero-section" id='home'>
+  <div className="hero-content">
+    {/* Profile Picture */}
+    <div className="profile-picture" style={{ textAlign: "center" }}>
+      <img
+        src={mypic}
+        alt="Joseph Teka"
+        className="profile-img"
+        style={{ border: "none" }}
+      />
+    </div>
 
-        {/* About Me Section */}
-        <section id="about" className="about-section">
-          <div className="container">
-            <h2 className="section-title">About Me</h2>
-            <div className="about-content">
-              <div className="about-text">
-                <p>
-                  Hi, I'm Joseph Teka — a passionate full-stack web developer with experience building modern web apps using clean code and solid UI/UX principles. I'm a Computer Science student at Jimma University and graduated from Evangadi Tech with full-stack development skills.
-                </p>
-                <p>
-                  I hold various certificates in web development and am constantly expanding my knowledge in the latest technologies. Currently working as a freelancer, building innovative solutions and growing my expertise in the field.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <h1 className="hero-name">Joseph Teka</h1>
+
+<div className="animated-title">Full-Stack Web Developer</div>
+
+<p className="hero-subtitle">
+  I build tools and websites that make life easier for developers, learners, and startups — using clean code, modern tech, and a creative mindset.
+</p>
+
+<div className="hero-cta">
+  <button 
+    className="cta-secondary"
+    onClick={() => window.open('https://t.me/jocode216', '_blank')}
+  >
+    <FaTelegram />
+  </button>
+  
+  <button 
+    className="cta-secondary"
+    onClick={() => scrollToSection('projects')}
+  >
+    View My Work
+  </button>
+  
+  <button 
+    className="cta-secondary"
+    onClick={() => window.open('https://github.com/josy216', '_blank')}
+  >
+    <RiGithubLine />
+  </button>
+</div>
+
+  </div>
+</section>
+
+{/* About Me Section */}
+<section id="about" className="about-section">
+  <div className="container">
+    <h2 className="section-title">About Me</h2>
+    <div className="about-content">
+      <div className="about-text">
+        <p>
+          Hey there — I’m <strong>Joseph Teka</strong>, a passionate and creative full-stack web developer with a strong eye for clean design, efficient code, and intuitive user experiences. I specialize in building modern, responsive web applications that solve real-world problems with precision and style.
+        </p>
+        <p>
+          I’m currently pursuing a degree in Computer Science at Jimma University and graduated from the Full-Stack Development Program at Evangadi Tech. With a solid foundation in both frontend and backend technologies, I enjoy transforming ideas into fully functional digital products.
+        </p>
+        <p>
+          Along the way, I’ve earned multiple certifications in web development and continuously stay up to date with the latest tools, trends, and best practices in the tech world. Whether it’s designing a polished UI or crafting powerful backend systems, I’m always eager to learn, build, and deliver.
+        </p>
+        <p>
+          As a freelancer, I work with individuals and startups to create impactful web solutions — while constantly sharpening my skills and pushing the boundaries of what I can create.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Tech Stack Section */}
-        <section className="tech-stack-section">
+        <section id='tech-stack' className="tech-stack-section">
           <div className="container">
             <h2 className="section-title">My Tech Stack</h2>
             <div className="tech-stack-grid">
-              {techStack.map((tech, index) => (
-                <div key={index} className="tech-stack-card">
+              {techStack.map((tech, App) => (
+                <div key={App} className="tech-stack-card">
                   <div className="tech-icon">{tech.icon}</div>
                   <h3 className="tech-name" style={{textAlign:"center"}}>{tech.name}</h3>
                 </div>
@@ -295,14 +339,21 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+
+
+        <DownloadResume />
 
         {/* Projects Section */}
         <section id="projects" className="projects-section">
           <div className="container">
             <h2 className="section-title">My Work</h2>
+            <div className='about-text'>
+              <p style={{textAlign:'center'}}>Production-ready applications with real impact and modern deployment</p>
+            </div>
             <div className="projects-grid">
-              {mainProjects.map((project, index) => (
-                <div key={index} className="project-card">
+              {mainProjects.map((project, App) => (
+                <div key={App} className="project-card">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -349,6 +400,7 @@ const Index = () => {
           </div>
         </section>
 
+
         {/* Learning Projects Section */}
         {showLearningProjects && (
           <section id="learning-projects" className="learning-projects-section">
@@ -356,8 +408,8 @@ const Index = () => {
               <h2 className="section-title">Learning Journey Projects</h2>
               <p className="section-subtitle">Projects I built while learning - showing my deep work and growth as a developer</p>
               <div className="projects-grid">
-                {learningProjects.map((project, index) => (
-                  <div key={index} className="project-card">
+                {learningProjects.map((project, App) => (
+                  <div key={App} className="project-card">
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -397,8 +449,8 @@ const Index = () => {
           <div className="container">
             <h2 className="section-title">Why Choose Me</h2>
             <div className="why-choose-grid">
-              {whyChooseMe.map((item, index) => (
-                <div key={index} className="why-choose-card">
+              {whyChooseMe.map((item, App) => (
+                <div key={App} className="why-choose-card">
                   <div className="card-icon">{item.icon}</div>
                   <h3 className="card-title">{item.title}</h3>
                   <p className="card-description">{item.description}</p>
@@ -408,16 +460,25 @@ const Index = () => {
           </div>
         </section>
 
+        
+        <Jobot />
+        {/* <Testimonials /> */}
+        {/* <Blog /> */}
+
         {/* Contact Section */}
         <section id="contact" className="contact-section">
           <div className="container">
-            <h2 className="section-title">Get In Touch</h2>
+            <h2 className="section-title">Let's Build Something Amazing</h2>
+            <div className="about-text">
+              <p style={{textAlign:"center"}}>Ready to turn your idea into a production-ready application?</p>
+            </div>
             <div className="contact-card">
              <form
   action="https://getform.io/f/bvryzqzb"
   method="POST"
   className="contact-form"
 >
+  
   <div className="form-group">
     <label htmlFor="name">Name</label>
     <input
@@ -472,9 +533,9 @@ const Index = () => {
           <div className="container">
             {/* Social Media Links */}
             <div className="social-links">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social, App) => (
                 <button
-                  key={index}
+                  key={App}
                   className="social-btn"
                   onClick={() => window.open(social.url, '_blank')}
                   title={social.name}
@@ -495,4 +556,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default App;
