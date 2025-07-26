@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import './index.css';
 import mypic from '/josy.jpg'
 
@@ -18,11 +18,15 @@ import { AiOutlineJavaScript } from 'react-icons/ai';
 import { FaMdb } from 'react-icons/fa';
 import Jobot from './Jobot';
 import { TbBrandTypescript } from 'react-icons/tb';
-import DownloadResume from './Downloadresume';
+import DownloadResume from './resume/DownloadResume';
 import { RiGithubLine, RiNextjsLine } from 'react-icons/ri';
 import Navbar from './Navbar';
-import Testimonials from './Testimonials';
-import Blog from './Blog';
+// import Skills from './skills/Skills'
+// import Testimonials from './Testimonials';
+import Blog from './blog/Blog';
+import { FaYoutube } from 'react-icons/fa';
+import Certificate from './Cerficate';
+import Projects from './project/Projects';
 const App = () => {
 
   const techStack = [
@@ -46,7 +50,6 @@ const App = () => {
 
 
   const canvasRef = useRef(null);
-  const [showLearningProjects, setShowLearningProjects] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -102,119 +105,11 @@ const App = () => {
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
-  const handleViewMoreProjects = () => {
-    setShowLearningProjects(true);
-    setTimeout(() => {
-      scrollToSection('learning-projects');
-    }, 100);
-  };
-  
- 
-  const mainProjects = [{
-  title: "Jocode Dev Tool",
-  description: "A powerful all-in-one platform that curates 500+ essential developer tools — from learning roadmaps to deployment resources. Built to help beginners avoid confusion and professionals save time, Jocode Dev Tool simplifies your dev journey with speed, clarity, and zero guesswork.",
-  image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg",
-  demoUrl: "https://jocode-devtools.netlify.app/",
-  githubUrl: "#"
-}
-,
-    {
-      title: "Netflix Clone",
-      description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
-      demoUrl: "https://net-dist.vercel.app/",
-      githubUrl: "https://github.com/Josy216/netflix"
-    }
-,
-    {
-      title: "Amazon Clone",
-      description: "A feature-rich ecommerce platform using React, Node.js, Express, and Stripe. Users can browse products, view details, add items to cart, sign up, and securely checkout via an integrated payment system — all backed by your custom backend.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png",
-      demoUrl: "https://distt-his-git-main-josy216s-projects.vercel.app/#/",
-      githubUrl: "https://github.com/Josy216/AmazonBackend"
-    },
-    {
-      title: "Evangadi Forum",
-      description: "A supportive Q&A community built for students to ask questions, share answers, and grow together. Designed to empower peer-to-peer learning within the Evangadi Tech community using a full-stack architecture.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/firum.png",
-      demoUrl: "https://evanforum.com/",
-      githubUrl: "#"
-    },
-    {
-      title: "Apple Clone",
-      description: "A stylish Apple.com-inspired UI built with React, Node.js, Express, and MySQL. Features include embedded product videos via YouTube API and a polished frontend that mimics Apple's signature design aesthetics.",
-      image: "https://josteka.netlify.app/ID-Photos/apple.jpg",
-      demoUrl: "https://jotekasap-le.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Apple"
-    },
-    {
-      title: "Unsplash.com Clone",
-      description: "A fast, responsive image search engine using the Unsplash API. Offers one-click downloads of high-quality photos with zero watermarks or signups — just search, find, and save.",
-      image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg",
-      demoUrl: "https://joseph-unsplash.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Joseph-unsplash-API"
-    },{
-  title: "Alex Tube",
-  description: "A playful YouTube reaction channel interface built with React — mimicking Netflix’s stylish layout. Alex’s hilarious video reactions keep everyone laughing, with dynamic sliders and smooth UI for a fun, binge-worthy experience. No login required — just pure entertainment.",
-  image: "https://i.ytimg.com/vi/kDefuhzUSZk/hqdefault.jpg",
-  demoUrl: "https://alexfegegfegeg.netlify.app/",
-  githubUrl: "https://github.com/Josy216/netflix"
-}
-  ];
-
-  const learningProjects = [
-    {
-      title: "My Frontend Journey — 20+ Projects from Pure Grind",
-      description: " This portfolio is the raw reflection of me burning out and building up — looping through HTML, CSS, and JavaScript with passion.   It’s my messy, honest, and evolving learning journey — and I’m proud of it.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2OTg1NjB8MHwxfHNlYXJjaHwyfHxkZXZlbG9wZXIlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzQ5ODQzMDk5fDA&ixlib=rb-4.1.0&q=85",
-      demoUrl: "https://josteka.netlify.app/",
-      githubUrl: "https://github.com/josephteka/color-generator"
-    },
-    {
-      title: "QR Code Generator",
-      description: "A website that lets users set their private links, text and password in QR codes. Perfect for sharing secure information in a visual format.",
-      image: "https://josteka.netlify.app/ID-Photos/qr-code.jpg",
-      demoUrl: "https://jo-qr-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/final-port"
-    },
-    {
-      title: "TodoList App",
-      description: "This app helps users organize their daily tasks by adding, updating, and deleting them. I created it using JavaScript to manage tasks efficiently. It’s useful for staying productive and keeping track of important things to do.",
-      image: "https://josteka.netlify.app/ID-Photos/todo.jpg",
-      demoUrl: "https://joseph-todo.netlify.app/",
-      githubUrl: "https://github.com/josephteka/quote-generator"
-    },
-    {
-      title: "Quote Generator",
-      description: "An inspiring website that generates endless facts and motivational quotes to uplift users and provide daily inspiration.",
-      image: "https://josteka.netlify.app/ID-Photos/quote.jpg",
-      demoUrl: "https://dailquote.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Generator-Qoute"
-    },
-    {
-      title: "Notion Clone ",
-      description: "A simple and funny note-taking app that lets users edit and save notes on localStorage. Because sometimes you just need a place to dump your random thoughts!",
-      image: "https://josteka.netlify.app/ID-Photos/notion.jpg",
-      demoUrl: "https://my-notion-five-rust.vercel.app/",
-      githubUrl: "https://github.com/Josy216/my-notion"
-    },
-    {
-      title: "Color Generator",
-      description: "A hexa and RGB color generator that gets people confused choosing from colors they don't know the name of. Perfect for designers who like surprises!",
-      image: "https://josteka.netlify.app/ID-Photos/hexa-color.jpg",
-      demoUrl: "https://josy-hex-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/hexa-color-code"
-    }
-  ];
 
   const whyChooseMe = [
     {
-      title: "Clean Code Expert",
+      title: "Clean Code",
       description: "I write maintainable, readable, and efficient code that follows industry best practices and standards."
-    },
-    {
-      title: "AI-Powered Development",
-      description: "Leveraging cutting-edge AI tools to accelerate development processes and deliver innovative solutions."
     },
     {
       title: "Full-Stack Proficiency",
@@ -239,7 +134,7 @@ const App = () => {
   { name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/joseph-teka-271661309" },
   { name: "Telegram", icon: <FaTelegramPlane />, url: "https://t.me/jocode216" },
   { name: "TikTok", icon: <FaTiktok />, url: "https://tiktok.com/@jocode216" },
-  { name: "Twitter", icon: <FaTwitter />, url: "https://x.com/Joseph376533100?t=ofK-E2KAL642p8zZ7TBPNA&s=09" } 
+  { name: "Youtube", icon: <FaYoutube />, url: "https://youtube.com/@jocode216" } 
 ];
 
   return (
@@ -339,110 +234,15 @@ const App = () => {
             </div>
           </div>
         </section>
+
         
 
 
         <DownloadResume />
 
-        {/* Projects Section */}
-        <section id="projects" className="projects-section">
-          <div className="container">
-            <h2 className="section-title">My Work</h2>
-            <div className='about-text'>
-              <p style={{textAlign:'center'}}>Production-ready applications with real impact and modern deployment</p>
-            </div>
-            <div className="projects-grid">
-              {mainProjects.map((project, App) => (
-                <div key={App} className="project-card">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="project-image"
-                  />
-                  <div className="project-content">
-                    <h3 className="project-title">{project.title}</h3>
-                    <p className="project-description">{project.description}</p>
-                    
-                    {/* Project Links */}
-                    <div className="project-icons">
-                      <button
-                        className="project-icon-btn"
-                        onClick={() => window.open(project.demoUrl, '_blank')}
-                        title="Live Demo"
-                      >
-                        🔗
-                      </button>
-                      <button
-                        className="project-icon-btn"
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                        title="GitHub Repository"
-                      >
-                         <FaGithub />
-                      </button>
+        <Projects />
 
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* View More Projects Button */}
-            {!showLearningProjects && (
-              <div className="view-more-container">
-                <button 
-                  className="view-more-btn"
-                  onClick={handleViewMoreProjects}
-                >
-                  View More Projects
-                </button>
-              </div>
-            )}
-          </div>
-        </section>
-
-
-        {/* Learning Projects Section */}
-        {showLearningProjects && (
-          <section id="learning-projects" className="learning-projects-section">
-            <div className="container">
-              <h2 className="section-title">Learning Journey Projects</h2>
-              <p className="section-subtitle">Projects I built while learning - showing my deep work and growth as a developer</p>
-              <div className="projects-grid">
-                {learningProjects.map((project, App) => (
-                  <div key={App} className="project-card">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="project-image"
-                    />
-                    <div className="project-content">
-                      <h3 className="project-title">{project.title}</h3>
-                      <p className="project-description">{project.description}</p>
-                      
-                      {/* Project Links */}
-                      <div className="project-icons">
-                        <button
-                          className="project-icon-btn"
-                          onClick={() => window.open(project.demoUrl, '_blank')}
-                          title="Live Demo"
-                        >
-                          🔗
-                        </button>
-                        <button
-                          className="project-icon-btn"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                          title="GitHub Repository"
-                        >
-                          <FaGithub />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        
 
         {/* Why Choose Me Section */}
         <section id="why-choose-me" className="why-choose-section">
@@ -464,6 +264,7 @@ const App = () => {
         <Jobot />
         {/* <Testimonials /> */}
         {/* <Blog /> */}
+        <Certificate />
 
         {/* Contact Section */}
         <section id="contact" className="contact-section">
@@ -498,7 +299,7 @@ const App = () => {
       id="email"
       name="email"
       required
-      placeholder="your.email@example.com"
+      placeholder="your email here"
       className="form-input"
     />
   </div>
@@ -520,7 +321,7 @@ const App = () => {
 
 
   <button type="submit" className="submit-btn">
-    ✉️ Send Message
+    Send Message
   </button>
 </form>
 

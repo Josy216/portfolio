@@ -1,25 +1,19 @@
 
-import React from 'react';
+// import {ela} from '/ela.jpg'
 import './project.css'
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Startup Founder",
-      content: "Joseph built our MVP in just 3 weeks. The code quality was exceptional and the deployment process was seamless. Highly recommend!",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Alex Rodriguez",
-      role: "Tech Lead at DevCorp",
+      name: "Elias Befikadu",
+      role: "Pdddddddddd",
       content: "Worked with Joseph on a complex React project. His attention to detail and modern development practices impressed our entire team.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
-      name: "Maya Patel",
+      name: "Elias Befikadu",
       role: "Product Manager",
       content: "Joseph doesn't just code - he thinks like a product person. He suggested improvements that saved us months of development time.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      avatar: '/ela.jpg'
     }
   ];
 
