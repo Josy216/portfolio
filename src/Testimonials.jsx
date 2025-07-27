@@ -1,6 +1,5 @@
 
 // import {ela} from '/ela.jpg'
-import './project.css'
 const Testimonials = () => {
   const testimonials = [
     {

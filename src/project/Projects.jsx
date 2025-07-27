@@ -17,15 +17,6 @@ const Projects = () => {
       skills: ["React", "Typescript", "Superbase", "APIs"]
     },
     {
-      id: 2,
-      title: "Netflix Clone",
-      description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
-      demoUrl: "https://net-dist.vercel.app/",
-      githubUrl: "https://github.com/Josy216/netflix",
-      skills: ["React", "Firebase", "TMDB API", "CSS"]
-    },
-    {
       id: 3,
       title: "Amazon Clone",
       description: "A feature-rich ecommerce platform using React, Node.js, Express, and Stripe. Users can browse products, view details, add items to cart, sign up, and securely checkout via an integrated payment system — all backed by your custom backend.",
@@ -38,10 +29,19 @@ const Projects = () => {
       id: 4,
       title: "Evangadi Forum",
       description: "A supportive Q&A community built for students to ask questions, share answers, and grow together. Designed to empower peer-to-peer learning within the Evangadi Tech community using a full-stack architecture. Built with React, Node.js, Express, and MySQL.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/firum.png",
+      image: "./forum.jpg",
       demoUrl: "https://evanforum.com/",
       githubUrl: "#",
       skills: ["React","CSS", "Node.js", "Express", "MySQL"]
+    },
+    {
+      id: 2,
+      title: "Netflix Clone",
+      description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
+      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
+      demoUrl: "https://net-dist.vercel.app/",
+      githubUrl: "https://github.com/Josy216/netflix",
+      skills: ["React", "Firebase", "TMDB API", "CSS"]
     },
     {
       id: 5,

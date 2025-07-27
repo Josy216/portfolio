@@ -39,6 +39,22 @@ const Certificate = ({ techStack = [] }) => {
       skills: ["Java", "Object-Oriented Programming", "Classes", "Inheritance"]
     },
     {
+      id: 7,
+      title: "JavaScript Fundamentals",
+      issuer: "GreatStack",
+      image: "./js.jpg",
+      description: "This certification covers JavaScript from basics to advanced DOM manipulation. I mastered fundamental programming concepts, event handling, and dynamic web interactions, building a strong foundation for front-end development.",
+      skills: ["JavaScript", "DOM Manipulation"]
+    },
+    {
+      id: 8,
+      title: "React Hooks",
+      issuer: "GreatStack",
+      image: "./react.jpg",
+      description: "This certification focuses on React Hooks, covering all 12 hooks from useState to custom hooks. I learned to build dynamic, stateful React applications with modern hook-based patterns for efficient and reusable code.",
+      skills: ["React", "React Hooks"]
+    },
+    {
       id: 5,
       title: "HTML",
       issuer: "Programming Hub",
@@ -54,22 +70,6 @@ const Certificate = ({ techStack = [] }) => {
       description: "Certified in CSS from Programming Hub, focusing on simple responsive web design, media queries, and CSS basics. I learned to transform HTML structures into visually appealing and responsive designs using styling techniques.",
       skills: ["CSS", "HTML"]
     },
-    {
-      id: 7,
-      title: "JavaScript Fundamentals",
-      issuer: "GreatStack",
-      image: "./js.jpg",
-      description: "This certification covers JavaScript from basics to advanced DOM manipulation. I mastered fundamental programming concepts, event handling, and dynamic web interactions, building a strong foundation for front-end development.",
-      skills: ["JavaScript", "DOM Manipulation"]
-    },
-    {
-      id: 8,
-      title: "React Hooks",
-      issuer: "GreatStack",
-      image: "./react.jpg",
-      description: "This certification focuses on React Hooks, covering all 12 hooks from useState to custom hooks. I learned to build dynamic, stateful React applications with modern hook-based patterns for efficient and reusable code.",
-      skills: ["React", "React Hooks"]
-    }
   ];
 
   // Function to get the icon for a skill

@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Tech Stack', href: '#tech-stack' },
     { name: 'Projects', href: '#projects' },
     { name: 'Why Me', href: '#why-choose-me' },
+    { name: 'certificates', href: '#certificates' },
     { name: 'Contact', href: '#contact' }
   ];
 
