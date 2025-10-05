@@ -5,72 +5,99 @@ import { FaTimes, FaGithub } from 'react-icons/fa';
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showLearningProjects, setShowLearningProjects] = useState(false);
-
   const mainProjects = [
     {
       id: 1,
       title: "Jocode Dev Tool",
-      description: "A powerful all-in-one platform that curates 500+ essential developer tools — from learning roadmaps to deployment resources. Built to help beginners avoid confusion and professionals save time, Jocode Dev Tool simplifies your dev journey with speed, clarity, and zero guesswork.",
+      description:
+        "A curated platform offering 500+ essential developer tools and resources, including roadmaps, boilerplates, and deployment kits. Designed to simplify learning for beginners and save time for professionals by eliminating guesswork in the development process.",
       image: "https://scintillating-madeleine-ea406a.netlify.app/mylogo.jpg",
       demoUrl: "https://jocode.devs.josephteka.com/",
       githubUrl: "#",
-      skills: ["React", "Typescript", "Superbase", "APIs"]
+      skills: ["React", "Typescript", "Superbase", "APIs"],
+    },
+    {
+      id: 4,
+      title: "Jocode Store",
+      description:
+        "A full-stack ecommerce application developed during a CodeAlpha internship. It supports user authentication, password resets, product listings from a mock API, and admin dashboards for managing products. The store blends online learning resources, digital tools, and tech gear into a single shopping experience for developers.",
+      image: "/store.png",
+      demoUrl: "https://codealpha-ecomerce.netlify.app",
+      githubUrl: "https://github.com/Josy216/codeAlpha-Ecomerce",
+      skills: ["React", "Node.js", "Express", "MySQL", "DummyJSON API", "CSS"],
+    },
+    {
+      id: 2,
+      title: "Evangadi Forum",
+      description:
+        "A Q&A forum built for the Evangadi Tech community where users can post questions, respond to discussions, and learn collaboratively. The system supports authentication, discussion threads, and user engagement with a scalable backend.",
+      image: "./forum.jpg",
+      demoUrl: "https://evanforum.com/",
+      githubUrl: "https://github.com/Josy216/Evangadi_forum",
+      skills: ["React", "CSS", "Node.js", "Express", "MySQL"],
     },
     {
       id: 3,
       title: "Amazon Clone",
-      description: "A feature-rich ecommerce platform using React, Node.js, Express, and Stripe. Users can browse products, view details, add items to cart, sign up, and securely checkout via an integrated payment system — all backed by your custom backend.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png",
+      description:
+        "A complete ecommerce solution allowing users to register, browse products, manage cart items, and complete secure checkouts. The platform also includes admin capabilities and a functional backend to support real-time transactions and product management.",
+      image:
+        "https://scintillating-madeleine-ea406a.netlify.app/Screenshot.png",
       demoUrl: "https://distt-his-git-main-josy216s-projects.vercel.app/#/",
       githubUrl: "https://github.com/Josy216/AmazonBackend",
-      skills: ["React", "Node.js", "Express","CSS", "Stripe", "Firebase"]
-    },
-    {
-      id: 4,
-      title: "Evangadi Forum",
-      description: "A supportive Q&A community built for students to ask questions, share answers, and grow together. Designed to empower peer-to-peer learning within the Evangadi Tech community using a full-stack architecture. Built with React, Node.js, Express, and MySQL.",
-      image: "./forum.jpg",
-      demoUrl: "https://evanforum.com/",
-      githubUrl: "#",
-      skills: ["React","CSS", "Node.js", "Express", "MySQL"]
-    },
-    {
-      id: 2,
-      title: "Netflix Clone",
-      description: "A full-stack movie streaming app built with React and Firebase. Users can sign up, log in, explore dynamic sliders and banners, and scroll through endless movie trailers with download links — refreshed with new content on every visit.",
-      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
-      demoUrl: "https://net-dist.vercel.app/",
-      githubUrl: "https://github.com/Josy216/netflix",
-      skills: ["React", "Firebase", "TMDB API", "CSS"]
+      skills: ["React", "Node.js", "Express", "CSS", "Stripe", "Firebase"],
     },
     {
       id: 5,
       title: "Apple Clone",
-      description: "A stylish Apple.com-inspired UI built with React, Node.js, Express, and MySQL. Features include embedded product videos via YouTube API and a polished frontend that mimics Apple's signature design aesthetics.",
+      description:
+        "A high-fidelity replica of Apple’s website showcasing sleek animations, product sections, and embedded video previews. The project delivers a refined user experience that closely mirrors Apple’s clean design standards and responsive layout.",
       image: "https://josteka.netlify.app/ID-Photos/apple.jpg",
       demoUrl: "https://jotekasap-le.netlify.app/",
       githubUrl: "https://github.com/Josy216/Apple",
-      skills: ["React", "Node.js", "Express", "MySQL","CSS","Boostrap", "YouTube API"]
+      skills: [
+        "React",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "CSS",
+        "Boostrap",
+        "YouTube API",
+      ],
     },
     {
       id: 6,
-      title: "Unsplash.com Clone",
-      description: "A fast, responsive image search engine using the Unsplash API. Offers one-click downloads of high-quality photos with zero watermarks or signups — just search, find, and save.",
-      image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg",
-      demoUrl: "https://joseph-unsplash.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Joseph-unsplash-API",
-      skills: ["HTML", "CSS", "JavaScript", "Unsplash API"]
+      title: "Netflix Clone",
+      description:
+        "A streaming platform interface that mimics Netflix with featured banners, movie sliders, and autoplay previews. Users can register, log in, and enjoy a smooth and engaging UI experience for discovering and viewing media content.",
+      image: "https://scintillating-madeleine-ea406a.netlify.app/netflix.jpg",
+      demoUrl: "https://net-dist.vercel.app/",
+      githubUrl: "https://github.com/Josy216/netflix",
+      skills: ["React", "Firebase", "TMDB API", "CSS"],
     },
     {
       id: 7,
+      title: "Unsplash.com Clone",
+      description:
+        "A fast-loading image search app that pulls real-time image results from the Unsplash API. Users can instantly search and download high-quality images without needing to register or log in, making it ideal for content creators.",
+      image: "https://josteka.netlify.app/ID-Photos/unsplash.jpg",
+      demoUrl: "https://joseph-unsplash.netlify.app/",
+      githubUrl: "https://github.com/Josy216/Joseph-unsplash-API",
+      skills: ["HTML", "CSS", "JavaScript", "Unsplash API"],
+    },
+    {
+      id: 9,
       title: "Alex Tube",
-      description: "A playful YouTube reaction channel interface built with React — mimicking Netflix’s stylish layout. Alex’s hilarious video reactions keep everyone laughing, with dynamic sliders and smooth UI for a fun, binge-worthy experience. No login required — just pure entertainment.",
+      description:
+        "A fun and interactive video showcase platform inspired by Netflix, focused on displaying entertaining YouTube reaction content. It features smooth sliders, a clean layout, and no login barriers — just hit play and enjoy.",
       image: "https://i.ytimg.com/vi/kDefuhzUSZk/hqdefault.jpg",
       demoUrl: "https://alexfegegfegeg.netlify.app/",
       githubUrl: "https://github.com/Josy216/netflix",
-      skills: ["React", "TMDB API", "CSS"]
-    }
+      skills: ["React", "TMDB API", "CSS"],
+    },
   ];
+
+
 
   const learningProjects = [
     {
@@ -82,51 +109,15 @@ const Projects = () => {
       githubUrl: "https://github.com/josephteka/color-generator",
       skills: ["HTML", "CSS", "JavaScript"]
     },
-    {
-      id: 9,
-      title: "QR Code Generator",
-      description: "A website that lets users set their private links, text and password in QR codes. Perfect for sharing secure information in a visual format.",
-      image: "https://josteka.netlify.app/ID-Photos/qr-code.jpg",
-      demoUrl: "https://jo-qr-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/final-port",
-      skills: ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      id: 10,
-      title: "TodoList App",
-      description: "This app helps users organize their daily tasks by adding, updating, and deleting them. I created it using JavaScript to manage tasks efficiently. It’s useful for staying productive and keeping track of important things to do.",
-      image: "https://josteka.netlify.app/ID-Photos/todo.jpg",
-      demoUrl: "https://joseph-todo.netlify.app/",
-      githubUrl: "https://github.com/josephteka/quote-generator",
-      skills: ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      id: 11,
-      title: "Quote Generator",
-      description: "An inspiring website that generates endless facts and motivational quotes to uplift users and provide daily inspiration.",
-      image: "https://josteka.netlify.app/ID-Photos/quote.jpg",
-      demoUrl: "https://dailquote.netlify.app/",
-      githubUrl: "https://github.com/Josy216/Generator-Qoute",
-      skills: ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      id: 12,
-      title: "Notion Clone",
-      description: "A simple and funny note-taking app that lets users edit and save notes on localStorage. Because sometimes you just need a place to dump your random thoughts!",
-      image: "https://josteka.netlify.app/ID-Photos/notion.jpg",
-      demoUrl: "https://my-notion-five-rust.vercel.app/",
-      githubUrl: "https://github.com/Josy216/my-notion",
-      skills: ["HTML", "CSS", "JavaScript", "localStorage"]
-    },
-    {
-      id: 13,
-      title: "Color Generator",
-      description: "A hexa and RGB color generator that gets people confused choosing from colors they don't know the name of. Perfect for designers who like surprises!",
-      image: "https://josteka.netlify.app/ID-Photos/hexa-color.jpg",
-      demoUrl: "https://josy-hex-code.netlify.app/",
-      githubUrl: "https://github.com/Josy216/hexa-color-code",
-      skills: ["HTML", "CSS", "JavaScript"]
-    }
+  {
+    id: 8,
+    title: "Abe Garage",
+    description: "A garage management system designed to handle customer registration, vehicle service tracking, and task assignments. Built for business use, it streamlines daily workflows and ensures service transparency for both customers and staff.",
+    image: "/abe.png",
+    demoUrl: "#",
+    githubUrl: "https://github.com/Josy216/Abe_greage",
+    skills: ["React", "Node.js", "Express", "MySQL","Typescript", "Bootstrap"]
+  },
   ];
 
   const scrollToSection = (sectionId) => {

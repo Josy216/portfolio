@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import './index.css';
 import { FaGithub, FaLinkedin, FaTelegramPlane, FaTiktok, FaYoutube } from 'react-icons/fa';
-import { FaHtml5, FaCss3, FaBootstrap, FaReact, FaNode, FaGit } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaBootstrap, FaReact,FaJava, FaNode, FaGit } from 'react-icons/fa';
 import { BiLogoTailwindCss } from 'react-icons/bi';
+import { BiLogoCPlusPlus } from 'react-icons/bi';
 import { SiExpress, SiMysql } from 'react-icons/si';
 import { IoLogoFirebase } from 'react-icons/io5';
 import { AiOutlineJavaScript } from 'react-icons/ai';
@@ -14,6 +15,7 @@ import DownloadResume from './resume/DownloadResume';
 import Navbar from './Navbar';
 import Testimonials from './Testimonials';
 import Blog from './blog/Blog';
+import Myvideo from './blog/Myvideo';
 import Certificate from './Cerficate';
 import Projects from './project/Projects';
 import HeroAbout from './hero/HeroAbout';
@@ -33,7 +35,9 @@ const App = () => {
     { name: "MySQL", icon: <SiMysql /> },
     { name: "MongoDb", icon: <FaMdb /> },
     { name: "Git/GitHub", icon: <FaGit /> },
-    { name: "Firebase", icon: <IoLogoFirebase /> }
+    { name: "Firebase && Superbase", icon: <IoLogoFirebase /> },
+    { name: "Java", icon: <FaJava /> },
+    { name: "C++", icon: <BiLogoCPlusPlus /> },
   ];
 
   const canvasRef = useRef(null);
@@ -155,6 +159,7 @@ const App = () => {
         </section>
 
         <Jobot />
+        <Myvideo />
         {/* <Blog /> */}
         <Certificate />
 

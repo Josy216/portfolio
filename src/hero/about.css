@@ -223,6 +223,12 @@
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+.about-imgs {
+  width: 100%;
+  min-height: 400px;
+  object-fit: cover;
+}
+
 .about-img:hover {
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
@@ -337,6 +343,11 @@
   .about-img {
     max-width: 250px;
   }
+  .about-imgs{
+    width: 78%;
+    min-height: 0px !important;
+  }
+
 
   .image-glow {
     width: 110%;
@@ -374,6 +385,11 @@
   .image-glow {
     max-width: 220px;
     max-height: 220px;
+  }
+  
+  .about-imgs{
+    width: 83%;
+    min-height: 0px !important;
   }
 }
 
@@ -423,6 +439,11 @@
 
   .stat-number {
     font-size: 1.5rem;
+  }
+  
+  .about-imgs{
+    width: 88%;
+    min-height: 0px !important;
   }
 
   .stat-label {

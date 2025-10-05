@@ -12,7 +12,7 @@ const DownloadResume = () => {
               Get a detailed overview of my skills, experience, and achievements.
               Download my resume to learn more about what I can bring to your project.
             </p>
-            <a href='https://josephresume.netlify.app/' download style={{textDecoration:'none'}}>
+            <a href='/resume.jpg' download style={{textDecoration:'none'}}>
               <button className="download-btn">
                 <span className="download-icon"> <FaArrowAltCircleDown /> </span>
                 Download Resume

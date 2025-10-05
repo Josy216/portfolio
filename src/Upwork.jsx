@@ -9,16 +9,15 @@ import { AiOutlineJavaScript } from 'react-icons/ai';
 import { FaMdb } from 'react-icons/fa';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { RiNextjsLine } from 'react-icons/ri';
-import Jobot from './Jobot';
-import DownloadResume from './resume/DownloadResume';
-import Navbar from './Navbar';
+import Navbar from './upworkAsset/Navbar';
 import Testimonials from './Testimonials';
 import Blog from './blog/Blog';
 import Certificate from './Cerficate';
-import Projects from './project/Projects';
+import Projects from './upworkAsset/Projects';
 import HeroAbout from './hero/HeroAbout';
+import Upworkhero from './hero/Upworkhero';
 
-const App = () => {
+const Upwork = () => {
   const techStack = [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3 /> },
@@ -120,7 +119,7 @@ const App = () => {
       <canvas ref={canvasRef} className="stars-canvas" />
       
       <div className="content">
-        <HeroAbout scrollToSection={scrollToSection} />
+        <Upworkhero scrollToSection={scrollToSection} />
 
         <section id="tech-stack" className="tech-stack-section">
           <div className="container">
@@ -135,8 +134,6 @@ const App = () => {
             </div>
           </div>
         </section>
-
-        <DownloadResume />
         <Projects />
 
         <section id="why-choose-me" className="why-choose-me-section">
@@ -154,70 +151,11 @@ const App = () => {
           </div>
         </section>
 
-        <Jobot />
         {/* <Blog /> */}
         <Certificate />
-
-        <section id="contact" className="contact-section">
-          <div className="container">
-            <h2 className="section-title">Let's Build Something Amazing</h2>
-            <div className="about-text">
-              <p style={{textAlign:"center"}}>Ready to turn your idea into a production-ready application?</p>
-            </div>
-            <div className="contact-card">
-              <form
-                action="https://getform.io/f/bvryzqzb"
-                method="POST"
-                className="contact-form"
-              >
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Your full name"
-                    className="form-input"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="your email here"
-                    className="form-input"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    placeholder="Tell me about your project..."
-                    className="form-textarea"
-                  />
-                </div>
-
-                <input type="hidden" name="_gotcha" style={{ display: 'none' }} />
-
-                <button type="submit" className="submit-btn">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
 };
 
-export default App;
+export default Upwork;

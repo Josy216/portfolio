@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
-import './navbar.css';
-import { FaTelegramPlane } from 'react-icons/fa';
+import '../navbar.css';
+import { FaUpwork } from 'react-icons/fa6';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Tech Stack", href: "#tech-stack" },
-    { name: "Projects", href: "#projects" },
-    { name: "Why Me", href: "#why-choose-me" },
-    { name: "myvideo", href: "#myvideo" },
-    { name: "certificates", href: "#certificates" },
+    { name: 'About', href: '#about' },
+    { name: 'Tech Stack', href: '#tech-stack' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Why Me', href: '#why-choose-me' },
+    { name: 'certificates', href: '#certificates' },
   ];
 
   useEffect(() => {
@@ -76,19 +75,19 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            onClick={() => window.open('https://t.me/josephteka', '_blank')}
+            onClick={() => window.open('https://www.upwork.com/freelancers/~01263078af1824fa21?mp_source=share', '_blank')}//upwork link
             className="hire-btn mobile-hire-btn"
           >
-            <FaTelegramPlane />
+            <FaUpwork /> 
           </button>
         </div>
 
         <div className="navbar-cta desktop-only">
           <button
-            onClick={() => window.open('https://t.me/josephteka', '_blank')}
+            onClick={() => window.open('https://www.upwork.com/freelancers/~01263078af1824fa21?mp_source=share', '_blank')}
             className="hire-btn"
           >
-            <FaTelegramPlane />
+            <FaUpwork />
           </button>
         </div>
       </div>

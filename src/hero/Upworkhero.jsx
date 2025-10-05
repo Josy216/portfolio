@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import './about.css';
 import { FaGithub, FaLinkedin, FaTelegramPlane, FaTiktok, FaYoutube } from 'react-icons/fa';
 
-const HeroAbout = ({ scrollToSection }) => {
+const Upworkhero = ({ scrollToSection }) => {
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -18,13 +18,7 @@ const HeroAbout = ({ scrollToSection }) => {
     });
   }, []);
 
-  const socialLinks = [
-    { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/josy216' },
-    { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/joseph-teka-271661309' },
-    { name: 'Telegram', icon: <FaTelegramPlane />, url: 'https://t.me/jocode216' },
-    { name: 'TikTok', icon: <FaTiktok />, url: 'https://tiktok.com/@jocode216' },
-    { name: 'YouTube', icon: <FaYoutube />, url: 'https://youtube.com/@jocode216' },
-  ];
+
 
   return (
     <>
@@ -45,26 +39,14 @@ const HeroAbout = ({ scrollToSection }) => {
               </button>
               <button
                 className="cta-primary"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('certificates')}
               >
-                Contact Me
+                view certificates
               </button>
             </div>
-            <div className="social-links hero-animate">
-              {socialLinks.map((social, index) => (
-                <button
-                  key={index}
-                  className="social-btn"
-                  onClick={() => window.open(social.url, '_blank')}
-                  title={social.name}
-                >
-                  <span className="social-icon">{social.icon}</span>
-                </button>
-              ))}
-            </div>
           </div>
-                <img src="/brnd.jpg"
-                style={{objectFit:'contain', background:'#e3eef9'}}
+                <img src="/josy.jpg"
+                style={{objectFit:'contain', background:'#e3eef9', border:'none'}}
                  alt="Joseph Teka" className="about-img" />
         </div>
       </section>
@@ -76,9 +58,9 @@ const HeroAbout = ({ scrollToSection }) => {
           <div className="about-content">
             <div className="about-image">
               <div className="image-wrapper">
-                <img src="/brnd.jpg"
+                <img src="/image.jpg"
                 style={{objectFit:'contain', background:'#475691', border:'none'}}
-                 alt="Joseph Teka" className="about-imgs" />
+                 alt="Joseph Teka" className="about-imgs" /> 
                 <div className="image-glow"></div>
               </div>
             </div>
@@ -111,4 +93,4 @@ const HeroAbout = ({ scrollToSection }) => {
   );
 };
 
-export default HeroAbout;
+export default Upworkhero;
