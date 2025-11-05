@@ -1,0 +1,331 @@
+
+.jobot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+}
+
+.jobot-fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.jobot-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+}
+
+.jobot-fab::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.jobot-icon {
+  font-size: 24px;
+  color: white;
+  z-index: 1;
+}
+
+.jobot-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.jobot-chat {
+  display: none; /* Add this */
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  pointer-events: none; /* Optional fallback */
+}
+
+
+.jobot-chat.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.jobot-header {
+  padding: 20px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jobot-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jobot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.jobot-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.jobot-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.jobot-info p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.jobot-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.jobot-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.jobot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.jobot-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.jobot-messages::-webkit-scrollbar-track {
+  background: rgba(55, 65, 81, 0.3);
+}
+
+.jobot-messages::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 2px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 85%;
+}
+
+.message.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.message-avatar.bot {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.message-avatar.bot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-avatar.user {
+  background: rgba(55, 65, 81, 0.5);
+  color: #d1d5db;
+}
+
+.message-content {
+  background: rgba(31, 41, 55, 0.8);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.message.user .message-content {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9ca3af;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; }
+  30% { opacity: 1; }
+}
+
+.jobot-input {
+  padding: 20px;
+  border-top: 1px solid rgba(55, 65, 81, 0.5);
+  display: flex;
+  gap: 12px;
+}
+
+.jobot-input input {
+  flex: 1;
+  background: rgba(55, 65, 81, 0.5);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.jobot-input input:focus {
+  border-color: #3b82f6;
+}
+
+.jobot-input input::placeholder {
+  color: #9ca3af;
+}
+
+.jobot-send {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  min-width: 60px;
+}
+
+.jobot-send:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.jobot-send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .jobot-chat {
+    width: 300px;
+    height: 450px;
+  }
+  
+  .jobot-container {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobot-chat {
+    width: calc(100vw - 30px);
+    right: -10px;
+    height: 400px;
+  }
+}

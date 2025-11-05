@@ -1,0 +1,22 @@
+{
+  "name": "Joseph Teka Portfolio",
+  "short_name": "JosephTeka",
+  "description": "Portfolio website of Joseph Teka — Full Stack Web Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/brnd.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/brnd.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
