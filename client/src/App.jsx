@@ -122,7 +122,7 @@ const App = () => {
     <div className="portfolio-container">
       <Navbar />
       <canvas ref={canvasRef} className="stars-canvas" />
-      
+
       <div className="content">
         <HeroAbout scrollToSection={scrollToSection} />
 
@@ -133,7 +133,9 @@ const App = () => {
               {techStack.map((tech, index) => (
                 <div key={index} className="tech-stack-card">
                   <div className="tech-icon">{tech.icon}</div>
-                  <h3 className="tech-name" style={{textAlign:"center"}}>{tech.name}</h3>
+                  <h3 className="tech-name" style={{ textAlign: "center" }}>
+                    {tech.name}
+                  </h3>
                 </div>
               ))}
             </div>
@@ -167,7 +169,10 @@ const App = () => {
           <div className="container">
             <h2 className="section-title">Let's Build Something Amazing</h2>
             <div className="about-text">
-              <p style={{textAlign:"center"}}>Ready to turn your idea into a production-ready application?</p>
+              <p style={{ textAlign: "center" }}>
+                Have a project in mind? I'd love to hear about it and discuss
+                how we can bring it to life.
+              </p>
             </div>
             <div className="contact-card">
               <form
@@ -211,7 +216,11 @@ const App = () => {
                   />
                 </div>
 
-                <input type="hidden" name="_gotcha" style={{ display: 'none' }} />
+                <input
+                  type="hidden"
+                  name="_gotcha"
+                  style={{ display: "none" }}
+                />
 
                 <button type="submit" className="submit-btn">
                   Send Message

@@ -57,9 +57,10 @@ const socialLinks = [
               Full-Stack Web Developer
             </div>
             <p className="hero-subtitle hero-animate">
-              I build tools and websites that make life easier for developers,
-              learners, and startups — using clean code, modern tech, and a
-              creative mindset.
+              I create web applications that solve real problems - from
+              developer tools that streamline workflows to educational platforms
+              that make coding accessible. I focus on building solutions that
+              are both functional and user-friendly.
             </p>
             <div className="hero-cta hero-animate">
               <button
@@ -119,31 +120,37 @@ const socialLinks = [
             </div>
             <div className="about-text">
               <p>
-                I’m Joseph Teka, a full-stack web developer passionate about
-                creating clean, useful, and engaging web experiences.
+                I'm Joseph - a developer who gets excited about turning complex
+                problems into clean, working solutions. There's something really
+                satisfying about watching an idea become a real application that
+                people can actually use.
               </p>
               <p>
-                I finished an intensive full-stack bootcamp at Evangadi Tech and
-                now run JoCode, a YouTube channel where I teach web development
-                basics for free — to learn, share, and grow with others.
+                My coding journey really took off after completing the Evangadi
+                Tech bootcamp. These days, I'm building Jocode - a collection of
+                tools and resources I wish I had when I was learning. I also
+                share what I've learned through YouTube tutorials, because
+                honestly, teaching others has been one of the best ways to
+                deepen my own understanding.
               </p>
               <p>
-                I’m also building a Developer Toolkit, a single place where
-                developers can find the best resources — from design assets to
-                learning roadmaps — for every stack they work with.
+                Right now, I'm focused on creating a comprehensive Developer
+                Toolkit - a single hub where developers can find everything from
+                design assets to learning roadmaps without jumping between
+                dozens of tabs and bookmarks.
               </p>
               <div className="about-stats">
                 <div className="stat-card">
                   <span className="stat-number">1+</span>
-                  <span className="stat-label">Years Experience</span>
+                  <span className="stat-label">Year Building</span>
                 </div>
                 <div className="stat-card">
                   <span className="stat-number">20+</span>
-                  <span className="stat-label">Projects Completed</span>
+                  <span className="stat-label">Projects Built</span>
                 </div>
                 <div className="stat-card">
                   <span className="stat-number">5+</span>
-                  <span className="stat-label">Certifications</span>
+                  <span className="stat-label">Skills Certified</span>
                 </div>
               </div>
             </div>
