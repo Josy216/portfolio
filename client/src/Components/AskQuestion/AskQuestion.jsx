@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./AskQuestion.css";
 import axios from "axios";
 
@@ -24,7 +24,6 @@ function AskQuestion() {
         }
       );
 
-      alert("Your question was posted!");
       setTitle("");
       setDetail("");
     } catch (err) {
